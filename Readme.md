@@ -1,6 +1,6 @@
-#  Site (2016 Edition)
+# Patient-Physician networks
 
-A simple website in node js to accompany a blog post.
+A simple demo in node js to accompany the use of blockchain in Healthcare Code-A-Thon.
 
 ## Setup
 
@@ -9,5 +9,7 @@ npm i
 npm run build
 npm start
 
+# development mode (watches for source file changes)
+npm run dev
 ```
 
