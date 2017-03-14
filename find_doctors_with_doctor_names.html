@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h1>Find Doctors</h1>
+<h4>Welcome John Doe</h4>
+<form action="/action_page.php">
+  Search by Location: <input type="text" name="location" value="">
+  <br><br>
+  Search by Name: <input type="text" name="lastname" value="">
+  <br><br>
+		<div > Search by Specialty: 
+              <select class="chosen-select-deselect-Specialty" id="selectSpecialty" data-placeholder="Choose a Specialty..." style="width:300px; ">
+				  <option value=""></option>
+					<option value="01">General Practice</option>
+					<option value="02">General Surgery</option>
+					<option value="03">Allergy/Immunology</option>
+					<option value="04">Otolaryngology</option>
+					<option value="05">Anesthesiology</option>
+					<option value="06">Cardiology</option>
+					<option value="07">Dermatology</option>
+					<option value="08">Family Practice</option>
+					<option value="09">Interventional Pain Management</option>
+					<option value="10">Gastroenterology</option>
+					<option value="11" selected >Internal Medicine</option>
+					<option value="12">Osteopathic Manipulative Medicine</option>
+					<option value="13">Neurology</option>
+					<option value="14">Neurosurgery</option>
+					<option value="16">Obstetrics/Gynecology</option>
+					<option value="17">Hospice and Pallative Care</option>
+					<option value="18">Ophthalmology</option>
+					<option value="19">Oral Surgery (dentists only)</option>
+					<option value="20">Orthopedic Surgery</option>
+					<option value="21">Cardiac Electrophysiology</option>
+					<option value="22">Pathology</option>
+					<option value="23">Sports Medicine</option>
+					<option value="24">Plastic and Reconstructive Surgery</option>
+					<option value="25">Physical Medicine and Rehabilitation</option>
+					<option value="26">Psychiatry</option>
+					<option value="27">Geriatric Psychiatry</option>
+					<option value="28">Colorectal Surgery</option>
+					<option value="29">Pulmonary Disease</option>
+					<option value="30">Diagnostic Radiology</option>
+					<option value="33">Thoracic Surgery</option>
+					<option value="34">Urology</option>
+					<option value="35">Chiropractic</option>
+					<option value="36">Nuclear Medicine</option>
+					<option value="37">Pediatric Medicine</option>
+					<option value="38">Geriatric Medicine</option>
+					<option value="39">Nephrology</option>
+					<option value="40">Hand Surgery</option>
+					<option value="41">Optometry</option>
+					<option value="44">Infectious Disease</option>
+					<option value="46">Endocrinology</option>
+					<option value="48">Podiatry</option>
+					<option value="66">Rheumatology</option>
+					<option value="70">Clinic/Group Practice</option>
+					<option value="72">Pain Management</option>
+					<option value="76">Peripheral Vascular Disease</option>
+					<option value="77">Vascular Surgery</option>
+					<option value="78">Cardiac Surgery</option>
+					<option value="79">Addiction Medicine</option>
+					<option value="81">Critical Care (Intensivists)</option>
+					<option value="82">Hematology</option>
+					<option value="83">Hematology/Oncology</option>
+					<option value="84">Preventive Medicine</option>
+					<option value="85">Maxillofacial Surgery</option>
+					<option value="90">Medical Oncology</option>
+					<option value="91">Surgical Oncology</option>
+					<option value="92">Radiation Oncology</option>
+					<option value="93">Emergency Medicine</option>
+					<option value="94">Interventional Radiology</option>
+					<option value="98">Gynecological/Oncology</option>
+					<option value="C0">Sleep Medicine</option>
+					<option value="15">Speech Language Pathologist in Private Practice</option>
+					<option value="31">Intensive Cardiac Rehabilitation</option>
+					<option value="32">Anesthesiologist Assistant</option>
+					<option value="42">Certified Nurse Midwife</option>
+					<option value="43">Certified Registered Nurse Anesthetist (CRNA)</option>
+					<option value="45">Mammography Screening Center</option>
+					<option value="47">Independent Diagnostic Testing Facility (IDTF)</option>
+					<option value="49">Ambulatory Surgical Center</option>
+					<option value="50">Nurse Practitioner</option>
+					<option value="59">Ambulance Service Supplier</option>
+					<option value="62">Psychologist (billing independently)</option>
+					<option value="63">Portable X-ray Supplier (billing independently)</option>
+					<option value="64">Audiologist</option>
+					<option value="65">Physical Therapist in Private Practice</option>
+					<option value="67">Occupational Therapist in Private Practice</option>
+					<option value="68">Clinical Psychologist</option>
+					<option value="69">Independent Clinical Laboratory</option>
+					<option value="71">Registered Dietitian/Nutrition Professional</option>
+					<option value="73">Mass Immunization Roster Biller</option>
+					<option value="74">Radiation Therapy Centers</option>
+					<option value="80">Clinical Social Worker</option>
+					<option value="87">Pharmacy</option>
+					<option value="89">Clinical Nurse Specialist</option>
+					<option value="97">Physician Assistant</option>
+				</select>
+		</div>
+  <br>
+  <input type="submit" value="Search">
+</form> 
+<br>
+<table>
+  <tr>
+    <th>Doctor Name</th>
+    <th>Specialty</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Maria Anders</a></td>
+    <td>Psychiatry</td>
+    <td>Bethesda, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Francisco Chang</a></td>
+    <td>Psychiatry</td>
+    <td>Silver Spring, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Roland Mendel</a></td>
+    <td>Psychology</td>
+    <td>Chevy Chase, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Helen Bennett</a></td>
+    <td>Psychiatry</td>
+    <td>Rockville, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Yoshi Tannamuri</a></td>
+    <td>Psychology</td>
+    <td>Columbia, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Giovanni Rovelli</a></td>
+    <td>Psychiatry</td>
+    <td>Columbia, Maryland</td>
+  </tr>
+</table>
+</body>
+</html>
