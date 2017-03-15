@@ -60,7 +60,7 @@ app.post('/patients_login', function (req, res, next) {
      console.log(req.body.password);
      if ( (req.body.user_name == 'user') || 
       (req.body.public_key == 'jHngNdXaGG4vDCvmTcM3VVskrhoXaj7iUN')){
-        if( req.body.password == '123'){
+        if( req.body.password == '111'){
           var wallet = new JingtumSDK.Wallet('ssRdGy4VSvN2jqQ4ro7ksNgBvoBSn');
           wallet.getBalance(function (err, data) {
               if(err) console.log(err);
@@ -116,8 +116,13 @@ app.post('/new_physician', function (req, res, next) {
   try {
      console.log("post info in find results page");
      console.log(req.body);
-     if (req.body)
-       res.send('Welcome: Dr.'+req.body.firstname+' '+req.body.lastname);
+     var wallet = JingtumSDK.FinGate.createWallet();
+     console.log(wallet);
+     if (req.body){
+       res.send('Welcome: Dr.'+req.body.firstname+' '+req.body.lastname+" Your public key is:"+wallet.address);
+       // res.send('Your public key is: '+wallet.getAddress());
+       // res.send('Your secret key is: '+wallet.getSecret());
+     }
     // res.sendFile(__dirname + '/find_results.html')
   } catch (e) {
     next(e)
