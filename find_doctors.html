@@ -3,13 +3,16 @@
 <head>
 </head>
 <body>
-<h1>Physician Sign Up</h1>
-<form action="/new_physician" method="POST">
-  Physician First Name: <input type="text" name="firstname" value="">
+<h1>Find Doctors</h1>
+<h4>Welcome patient: John Smith</h4>
+<h4> Public key: jHngNdXaGG4vDCvmTcM3VVskrhoXaj7iUN </h4>
+<h4> Private key: ssRdGy4VSvN2jqQ4ro7ksNgBvoBSn </h4>
+<form action="/find_results">
+  Search by Location: <input type="text" name="location" value="">
   <br><br>
-  Physician Last name: <input type="text" name="lastname" value="">
+  Search by Name: <input type="text" name="lastname" value="">
   <br><br>
-		<div > Specialty: 
+		<div > Search by Specialty: 
               <select class="chosen-select-deselect-Specialty" id="selectSpecialty" data-placeholder="Choose a Specialty..." style="width:300px; ">
 				  <option value=""></option>
 					<option value="01">General Practice</option>
@@ -98,18 +101,9 @@
 					<option value="97">Physician Assistant</option>
 				</select>
 		</div>
-<br>
-<div class="form-group ">
-	<span class="custom-span pull-left">Upload Medical License </span>
-	<input class="span4 uploadFile" id="uploadFile" data-ng-model="uploadFileName" data-ng-readonly="true"/>
-
-	 <input id="uploadBtn" type="file" class="upload" name="pdf_file" accept=".pdf" onchange="angular.element(this).scope().fileChanged(this.files);">
-</div>
-</br>
-  <!-- <input type="submit" value="Submit"> -->
-  <button type="submit">Submit</button>
+  <br>
+  <input type="submit" value="Search">
 </form> 
-
 
 </body>
 </html>

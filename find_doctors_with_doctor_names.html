@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
 </head>
 <body>
-<h1>Physician Sign Up</h1>
-<form action="/new_physician" method="POST">
-  Physician First Name: <input type="text" name="firstname" value="">
+<h1>Find Doctors</h1>
+<h4>Welcome patient</h4>
+<form action="/action_page.php">
+  Search by Location: <input type="text" name="location" value="">
   <br><br>
-  Physician Last name: <input type="text" name="lastname" value="">
+  Search by Name: <input type="text" name="lastname" value="">
   <br><br>
-		<div > Specialty: 
+		<div > Search by Specialty: 
               <select class="chosen-select-deselect-Specialty" id="selectSpecialty" data-placeholder="Choose a Specialty..." style="width:300px; ">
 				  <option value=""></option>
 					<option value="01">General Practice</option>
@@ -98,18 +116,46 @@
 					<option value="97">Physician Assistant</option>
 				</select>
 		</div>
-<br>
-<div class="form-group ">
-	<span class="custom-span pull-left">Upload Medical License </span>
-	<input class="span4 uploadFile" id="uploadFile" data-ng-model="uploadFileName" data-ng-readonly="true"/>
-
-	 <input id="uploadBtn" type="file" class="upload" name="pdf_file" accept=".pdf" onchange="angular.element(this).scope().fileChanged(this.files);">
-</div>
-</br>
-  <!-- <input type="submit" value="Submit"> -->
-  <button type="submit">Submit</button>
+  <br>
+  <input type="submit" value="Search">
 </form> 
-
-
+<br>
+<table>
+  <tr>
+    <th>Doctor Name</th>
+    <th>Specialty</th>
+    <th>Location</th>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Maria Anders</a></td>
+    <td>Psychiatry</td>
+    <td>Bethesda, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Francisco Chang</a></td>
+    <td>Psychiatry</td>
+    <td>Silver Spring, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Roland Mendel</a></td>
+    <td>Psychology</td>
+    <td>Chevy Chase, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Helen Bennett</a></td>
+    <td>Psychiatry</td>
+    <td>Rockville, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Yoshi Tannamuri</a></td>
+    <td>Psychology</td>
+    <td>Columbia, Maryland</td>
+  </tr>
+  <tr>
+    <td><a href="find_doctors_with_doctor_names.html">Giovanni Rovelli</a></td>
+    <td>Psychiatry</td>
+    <td>Columbia, Maryland</td>
+  </tr>
+</table>
 </body>
 </html>
